@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Monitortable from "./Monitortable";
 import tabdata from "../data.json";
 
 class Monitor extends Component {
@@ -20,13 +19,13 @@ class Monitor extends Component {
                         </span>
                     </div>
                 </div>
-
+              
                         <div className="monitor-inbox">
                             <div className="monitorbox-left">
                                 <div className="monitorbox-text-left">
                                     <div className="monitorbox-textinside">
                                         <span>Total <span className="box-hint">Members :</span></span>
-                                        <span className="box-hint"></span>
+                                        <span className="box-hint">{tabdata.data.summarytier[0].total_members}</span>
                                     </div>
                                     <div className="monitorbox-textinside">
                                         <span>Total <span className="box-hint">Rev.<span className="box-hintsm"> (THB) </span>:</span></span>
@@ -39,11 +38,11 @@ class Monitor extends Component {
 
                             <div className="monitorbox-right">
                                 <div className="monitorbox-textinside-name">
-                                    <span> </span>
+                                    <span> {tabdata.data.summarytier[0].tier_name}</span>
                                 </div>
                                 <div className="monitorbox-textinside">
                                     <span>Total <span className="box-hint">Members :</span></span>
-                                    <span className="box-hint"></span>
+                                    <span className="box-hint">{tabdata.data.summarytier[0].total_members}</span>
                                 </div>
                                 <div className="monitorbox-textinside">
                                     <span>Total <span className="box-hint">Rev.<span className="box-hintsm"> (THB) </span>:</span></span>
