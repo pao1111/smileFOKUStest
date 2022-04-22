@@ -17,28 +17,31 @@ class Monitortable extends Component {
         return (
             <div>
                 <table>
-                    <tr className="table-head">
-                        <th>Name</th>
-                        <th>ID</th>
-                        <th>Tier</th>
-                        <th>LTV</th>
-                        <th>Total Trans.</th>
-                        <th>Total Point</th>
-                        <th>Remaining Point</th>
-                    </tr>
-                    {duplicate.map(el => (
-                        <tr>
-                            <td>{el.customername}</td>
-                            <td className="center">{el.customerphone}</td>
-                            <td className="center">{el.customertier}</td>
-                            <td className="right">{el.totalamount}</td>
-                            <td className="right">{el.totaltransaction}</td>
-                            <td className="right">{el.totalreward}</td>
-                            <td className="right">{el.remainingpoint}</td>
+                    <thead>
+                        <tr className="table-head">
+                            <th>Name</th>
+                            <th>ID</th>
+                            <th>Tier</th>
+                            <th>LTV</th>
+                            <th>Total Trans.</th>
+                            <th>Total Point</th>
+                            <th>Remaining Point</th>
                         </tr>
-                    ))}
+                    </thead>
+                    <tbody>
+                        {duplicate.map((el,i) => (
+                            <tr key={i}>
+                                <td>{el.customername}</td>
+                                <td className="center">{el.customerphone}</td>
+                                <td className="center">{el.customertier}</td>
+                                <td className="right">{el.totalamount}</td>
+                                <td className="right">{el.totaltransaction}</td>
+                                <td className="right">{el.totalreward}</td>
+                                <td className="right">{el.remainingpoint}</td>
+                            </tr>
+                        ))}
+                    </tbody>
                 </table>
-
                 <div className="paginate">1-5 of 5 </div>
 
             </div>

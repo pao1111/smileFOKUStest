@@ -1,28 +1,21 @@
-import './App.css'
-import React, { Component } from 'react';
+import './App.css';
 import Header from "./component/Header";
 import SubHeader from "./component/SubHeader";
 import Monitor from "./component/Monitor";
 import Footer from "./component/Footer";
+import Monitortable from "./component/Monitortable";
 
-class App extends Component {
+function App() {
+  return (
+    <div>
+      <Header />
+      <SubHeader />
+      <Monitor />
+      <Monitortable />
+      <Footer />
 
-  constructor(props) {
-    super(props);
-    this.state = { products: "" };
-  }
-
-  render() {
-    return (
-      <div>
-        <Header />
-        <SubHeader />
-        <Monitor />
-        <Footer />
-      </div>
-
-    );
-  }
+    </div>
+  );
 }
 
 export default App;
